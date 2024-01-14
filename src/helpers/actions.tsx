@@ -2,7 +2,7 @@
 
 export async function fetchSlides() {
   try {
-    const res = await fetch(`${process.env.APP_URL}carousel`);
+    const res = await fetch(`${process.env.JSON_URL}carousel`);
     if (!res.ok) {
       throw new Error("Fetching slides failed");
     }
@@ -21,7 +21,7 @@ export async function fetchSlides() {
 
 export async function fetchArticles() {
   try {
-    const res = await fetch(`${process.env.APP_URL}articles`);
+    const res = await fetch(`${process.env.JSON_URL}articles`);
     if (!res.ok) {
       throw new Error("Fetching articles failed");
     }
@@ -40,7 +40,7 @@ export async function fetchArticles() {
 
 export async function getArticleById(id: string | number) {
   try {
-    const res = await fetch(`${process.env.APP_URL}articles/${id}`);
+    const res = await fetch(`${process.env.JSON_URL}articles/${id}`);
     if (!res.ok) {
       throw new Error("Fetching articles failed");
     }
