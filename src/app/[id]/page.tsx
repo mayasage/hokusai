@@ -35,9 +35,7 @@ export default async function ArticlePage({
 }
 
 export async function generateStaticParams() {
-  const articles = await fetch(`${process.env.JSON_URL}/articles`).then((res) =>
-    res.json()
-  );
+  const articles = await fetchArticles();
 
   return articles.map((article: { id: string }) => {
     return {

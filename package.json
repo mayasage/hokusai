@@ -21,7 +21,7 @@
     "react-bootstrap": "^2.9.2",
     "react-dom": "^18",
     "react-masonry-css": "^1.0.16",
-    "sharp": "^0.33.2"
+    "sharp": "0.33.1"
   },
   "devDependencies": {
     "@types/node": "^20",
