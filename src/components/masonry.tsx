@@ -12,7 +12,9 @@ type Article = {
 };
 
 export default function MasonryComponent({ data }: { data: Article[] }) {
-  console.info("components/masonry: MasonryComponent: data:", data);
+  if (process.env.CONSOLE_INFO === "true") {
+    console.info("components/masonry: MasonryComponent: data:", data);
+  }
 
   const breakpoints = {
     default: 3,
